@@ -1,0 +1,169 @@
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+#content {
+    line-height: 1.6;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+/* Two-column layout: TOC on left, content on right */
+.layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.toc {
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow: auto;
+    padding: 12px;
+    background: #f7f7f7;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+#toc-list {
+    margin-top: 8px;
+    font-size: 0.95rem;
+}
+
+.toc-item a {
+    color: green;
+    text-decoration: none;
+    display: inline-block;
+    padding: 3px 0;
+}
+
+.toc-item a:hover {
+    text-decoration: underline;
+}
+
+.toc-target-highlight {
+    background: rgba(3,102,214,0.08);
+    transition: background 0.3s ease;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 800px) {
+    .layout { grid-template-columns: 1fr; }
+    .toc { position: static; max-height: none; margin-bottom: 12px; }
+}
+
+pre {
+    background: green;
+    color: #d4d4d4;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: none;
+    overflow-x: auto;
+}
+
+pre code {
+    display: block;
+    white-space: pre;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: inherit;
+}
+
+code {
+    background: #f3f3f3;
+    padding: 2px 4px;
+    color: green;
+    font-size: 0.95rem;
+}
+
+#content em,
+#content i {
+    color: green;
+    font-weight: 700;
+}
+
+/* ── Back link (viewer page) ── */
+.top-nav {
+    margin-bottom: 16px;
+}
+
+.back-link {
+    color: green;
+    text-decoration: none;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.95rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* ── Home page ── */
+.home-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+.home-header h1 {
+    color: green;
+    margin-bottom: 4px;
+}
+
+.home-repo {
+    color: #555;
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+}
+
+.home-repo a {
+    color: green;
+    text-decoration: none;
+}
+
+.home-repo a:hover {
+    text-decoration: underline;
+}
+
+.file-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.file-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 12px 4px;
+}
+
+.file-item:first-child {
+    border-top: 1px solid #e0e0e0;
+}
+
+.file-link {
+    color: green;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.file-link:hover {
+    text-decoration: underline;
+}
+
+.file-loading {
+    color: #888;
+    list-style: none;
+    padding: 12px 0;
+}
+
+.file-error {
+    color: #c00;
+    list-style: none;
+}
