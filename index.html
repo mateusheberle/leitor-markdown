@@ -2,32 +2,26 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Leitor Markdown GitHub</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artigos</title>
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/vs.min.css">
-
-    <!-- Biblioteca Markdown -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 </head>
 <body>
 
-    <nav class="top-nav">
-        <a href="home.html" class="back-link">← Início</a>
-    </nav>
+    <div class="home-container">
+        <header class="home-header">
+            <h1>Artigos</h1>
+            <p class="home-repo">
+                Repositório:
+                <a href="https://github.com/mateusheberle/artigos" target="_blank" rel="noopener">
+                    mateusheberle/artigos
+                </a>
+            </p>
+        </header>
 
-    <div class="layout">
-        <aside id="toc" class="toc">
-            <h2>Sumário</h2>
-            <nav id="toc-list">Carregando sumário...</nav>
-        </aside>
-
-        <main id="content" class="content">
-            <h1>Documentação</h1>
-            Carregando...
-        </main>
+        <ul id="file-list" class="file-list">
+            <li class="file-loading">Carregando arquivos...</li>
+        </ul>
     </div>
 
     <script src="script.js"></script>
